@@ -1,0 +1,35 @@
+<%- include('./common/header') %>
+<!-- 
+<div class="container">
+    <h2>로그인</h2>        
+    <form action="/login" method="POST">
+        ID <input type="text" name="memberid" value=""><br> 
+        PASSWORD <input type="password" name="password" value=""><br> 
+        <input class="btn" type="submit" value="확인">
+    </form>
+</div> -->
+
+
+<main id="site-main">
+    <h2>로그인 </h2>          
+    <form action="/login" method="POST" id="add-user">
+        <div class="user-info">
+            <div class="col-12">
+                <label for="memberid" class="col-form-label">사용자 아이디(Member ID)</label>
+                <div>
+                <input type="text" class="form-control" name="memberid" id="memberid" placeholder="id를 입력하세요.">
+                </div>
+            </div>  
+            <div class="col-12">
+                <label for="password" class="col-form-label">비밀번호(Password)</label>
+                <div>
+                <input type="password" class="form-control" name="password" id="password" placeholder="비밀번호를 입력하세요.">
+                </div>
+            </div>  
+            <button type="submit">로그인</button>
+        </div>
+        </div>
+    </form>   
+</main>
+
+<%- include('./common/footer') %>

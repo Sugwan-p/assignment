@@ -1,0 +1,30 @@
+
+<%- include('./common/header') %>
+
+<div class="container">
+    <h2>회원 목록</h2>
+    <table class="table">
+        <tr>
+            <th>아이디</th>
+            <th>비밀번호</th>
+            <th>이름</th>
+            <th>나이</th>
+            <th>전화번호</th>
+            <th>주소</th>
+            <th>가입일</th>
+        </tr>
+        <%memberList.forEach(e => {%>
+            <tr>
+                <td><%=e.memberid%></td>
+                <td><%=(e.password).slice(0,10)%></td>
+                <td><%=e.membername%></td>
+                <td><%=e.age%></td>
+                <td><%=e.phone%></td>
+                <td><%=e.address%></td>
+                <td><%=dayjs(e.createdAt).format("LLL")%></td>
+            </tr>
+        <%})%>
+    </table>
+</div>
+
+<%- include('./common/footer') %>

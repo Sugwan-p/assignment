@@ -1,0 +1,63 @@
+<%- include('./common/header') %>
+
+
+<!-- <div class="container">
+    <h2>회원가입</h2>
+    <form action="/member_regist" method="POST">
+        회원(ID) <input type="text" name="memberid" value="test"><br> 
+        비밀번호(Password)  <input type="password" name="password" value="1212"><br> 
+        이름(Name) <input type="text" name="membername" value="홍길동"><br> 
+        나이(Age) <input type="text" name="age" value="31"><br>
+        전화번호(Phone) <input type="text" name="phone" value="010-3233-4444"><br>
+        주소(Address) <input type="text" name="address" value="서울시 강남구"><br>
+        <input class="btn"  type="submit" value="확인">
+    </form>
+</div> -->
+
+
+<main id="site-main">
+    <h2>회원가입 </h2>          
+    <p>사용자 정보를 입력해주세요.</p>
+    <form action="/member_regist" method="POST" id="add-user">
+        <div class="user-info">
+            <div class="col-12">
+                <label for="memberid" class="col-form-label">사용자 아이디(Member ID)</label>
+                <div>
+                <input type="text" class="form-control" name="memberid" id="memberid" placeholder="아이디를 입력하세요.">
+                </div>
+            </div>  
+            <div class="col-12">
+                <label for="password" class="col-form-label">비밀번호(Password)</label>
+                <div>
+                <input type="password" class="form-control" name="password" id="password"placeholder="비밀번호를 입력하세요." >
+                </div>
+            </div>  
+            <div class="col-12">
+                <label for="membername" class="col-form-label">이름(Full Name)</label>
+                <div>
+                <input type="text" class="form-control" name="membername" id="membername" placeholder="ex) 홍길동">
+                </div>
+            </div>
+            <div class="col-12">
+                <label for="age" class="col-form-label">나이(Age)</label>
+                <div>
+                <input type="text" class="form-control" name="age" id="age" placeholder="ex) 23">
+                </div>
+            </div>
+            <div class="col-12">
+                <label for="phone" class="col-form-label">전화번호(Mobile)</label>
+                <div>
+                <input type="text" class="form-control" name="phone" id="phone" placeholder="ex) 010-1234-5678">
+            </div>
+            <div class="col-12">
+                <label for="address" class="col-form-label">주소(Adress)</label>
+                <div>
+                <input type="text" class="form-control" name="address" id="address" placeholder="ex) 서울시 강남구 역삼동">
+            </div>
+        </div>
+        <button type="submit">저장하기</button>
+        </div>
+    </form>   
+</main>
+
+<%- include('./common/footer') %>
